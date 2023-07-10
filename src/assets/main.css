@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: poppins;
+}
+
+span {
+  cursor: pointer;
+}
+
+span i:hover {
+  color: #fba905;
+}
+
+.header {
+  padding: 1.5rem 0;
+  border-bottom: 2px solid #fff;
+}
+
+#app-container {
+  max-width: 500px;
+  height: 100vh;
+  margin: auto;
+  padding: 1rem;
+  background-color: #1d1d23;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  overflow: hidden scroll;
+  position: relative;
+}
+
+#app-container h1 {
+  color: #fff;
+  text-align: center;
+}
+
+.alarm {
+  padding: 1.5rem 1rem;
+  border-bottom: 2px solid #fff;
+}
+
+.alarm div:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.alarm div:nth-child(1) h1 {
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+
+.alarm div:nth-child(1) h1:hover {
+  padding: 0.5rem;
+  background-color: #34344a;
+}
+
+.alarm div:nth-child(1) span {
+  font-size: 2rem;
+  color: #efeeee;
+}
+
+.on {
+  color: #fba905;
+}
+
+.alarm div:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.alarm div:nth-child(2) div {
+  display: flex;
+  gap: 1rem;
+}
+
+.alarm div:nth-child(2) div i {
+  font-size: 1.5rem;
+  color: #efeeee;
+}
+
+.alarm div:nth-child(2) span {
+  font-size: 1.5rem;
+  color: #efeeee;
+}
+
+.add-alarm {
+  font-size: 4rem;
+  border: none;
+  background-color: transparent;
+  color: #fba905;
+  position: fixed;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+}
+
+.set-time {
+  width: 30%;
+  background-color: #34344a;
+  color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  position: fixed;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.set-time h2,
+h5 {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.time-input {
+  display: flex;
+  gap: 1rem;
+}
+
+.time-input input {
+  width: 50px;
+  display: block;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  border-bottom: 2px solid #fff;
+  outline: none;
+}
+
+.time-input input:hover {
+  border-color: #fba905;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1rem;
+}
+
+.buttons div {
+  display: flex;
+  gap: 1.5rem;
+  justify-self: end;
+}
+
+.buttons div button {
+  background-color: transparent;
+  color: #fba905;
+  font-size: 1.1rem;
+  border: none;
+}
+
+.slide-in {
+  animation: slide-in 0.5s linear forwards;
+}
+
+.slide-out {
+  animation: slide-out 0.5s linear forwards;
+}
+
+@keyframes slide-in {
+  from {
+    bottom: 0%;
+    opacity: 0;
+  }
+  to {
+    bottom: 30%;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    bottom: 30%;
+    opacity: 1;
+  }
+  to {
+    bottom: 0%;
+    opacity: 0;
+  }
+}
+
+#app-container::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #1d1d23;
+}
+
+#app-container::-webkit-scrollbar-thumb {
+  background: #efeeee;
+}
+
+@media (min-width: 280px) and (max-width: 500px) {
+  .set-time {
+    width: 80%;
+  }
+
+  #app-container {
+    max-width: 100vw;
+  }
+}
+
+@media (max-width: 920px) {
+  .set-time {
+    width: 60%;
+  }
+
+  #app-container {
+    max-width: 100vw;
+  }
+}
+
+@media (max-width: 280px) {
+  .set-time {
+    width: 80%;
+  }
+
+  #app-container {
+    max-width: 100vw;
+  }
+}
